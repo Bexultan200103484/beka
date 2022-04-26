@@ -1,0 +1,93 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'posts/css/style.css' %}">
+</head>
+<body>
+    <div class="navbar">
+		<div class="logo">
+			<h1>Travel</h1>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="http://127.0.0.1:8000/">Home</a></li>
+				<li><a href="http://127.0.0.1:8000/services">Services</a></li>
+				<li><a href="http://127.0.0.1:8000/places">Places</a></li>
+				<li><a href="http://127.0.0.1:8000/discount">Discounts</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="http://127.0.0.1:8000/index">Cooments</a></li>
+			</ul>
+		</div>
+		<div class="signup">
+			<a href="http://127.0.0.1:8000/registration">Sign Up</a>
+		</div>
+	</div>
+<div style="background-color:#4DB6AC;">
+    <nav class="navbar navbar-light" style="background-color:#FF0033;">
+    <a href="#" class="navbar-brand" style="background-color:#FFCC33;color:#000000;
+    border-width:10px;border-color:#FFCC33;
+    border-style:solid;border-spacing:30px;border-radius: 5px;">Posts app</a>
+    <a class="navbar-link btn-lg" href="{%url 'index' %}" style="background-color:#FFCC33;
+    color:#000000;">DataFlair</a>
+    <a href="{%url 'admin:index'%}" class = 'navbar-link btn-lg'
+    style="background-color:#FFCC33;color:#000000">Admin</a>
+    <a href="{%url 'upload-posts'%}" class = 'navbar-link btn-lg'
+    style="background-color:#FFCC33;color:#000000">Upload Posts</a>
+    </nav>
+<br>
+    {% block content%}
+    <div class="card-columns">
+        {%for post in posts%}
+        <div class="card" style="width:18rem;">
+        <img class="card-img-top" src="{{post.picture.url}}">
+            <div class="card-body">
+                <h5 class="card-title">{{post.name}}</h5>
+                <p class="card-text">{{post.describe}}</p>
+                <div class="card-footer bg-transparent border-dark">
+                    <p class="card-tittle">{{post.author}}</p>
+                    <center>
+                        <a href="update/{{post.id}}" class="btn btn-warning" id = '{{post.id}}'>edit</a>
+                        <a href="delete/{{post.id}}" class="btn btn-danger" id = '{{post.id}}'>delete</a>
+                    </center>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+    {%endblock%}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>   
+    <div class="footer">
+        <a href="#">Copyright</a>
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookies</a>
+        <a href="#">Complaints</a>
+        {%for actor in actor%}
+        <a href="#">{{actor.title}}</a>
+        {%endfor%}
+    </div>
+</body>
+</html>

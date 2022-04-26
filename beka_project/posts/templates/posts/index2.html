@@ -1,0 +1,83 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travel Website</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'posts/css/style.css' %}">
+</head>
+<body>
+	<div class="navbar">
+		<div class="logo">
+			<h1>Travel</h1>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="http://127.0.0.1:8000">Home</a></li>
+				<li><a href="http://127.0.0.1:8000/services">Services</a></li>
+				<li><a href="http://127.0.0.1:8000/places">Places</a></li>
+				<li><a href="http://127.0.0.1:8000/discount">Discounts</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="http://127.0.0.1:8000/index">Cooments</a></li>
+			</ul>
+		</div>
+		<div class="signup">
+			<a href="http://127.0.0.1:8000/registration">Sign Up</a>
+		</div>
+	</div>
+	<div class="body">
+		<div class="heading">
+			<h1>Travel With Us</h1>
+			<br>
+			<p>The best travel company for Kazakhstan</p>
+			<br>
+			<br>
+			<a href="#">Learn More</a>
+		</div>
+		<div class="tours">
+			<div class="places">
+				<h2>Burabai</h2>
+				<img src="https://tengritravel.kz/userdata/u161/2020-09/resize/0c71590027e99515f4602828b8fb01ee.jpeg" style="width: 300px; height: 250px; border-radius: 12px;">
+				<br>
+				<br>
+				<a href="#">Book Now 15% OFF</a>
+			</div>
+			<div class="places">
+				<h2>Saryagash</h2>
+				<img src="https://tengritravel.kz/userdata/u161/2020-09/resize/987d8b9edd44308721f42c5c025dffb7.jpeg" style="width: 300px; height: 250px; border-radius: 12px;">
+				<br>
+				<br>
+				<a href="#">Book Now 20% OFF</a>
+			</div>
+			<div class="places">
+				<h2>Alakol</h2>
+				<img src="https://tengritravel.kz/userdata/news/2020/news_394370/thumb_m/photo_311713.jpeg" style="width: 300px; height: 250px; border-radius: 12px;">
+				<br>
+				<br>
+				<a href="#">Book Now 25% OFF</a>
+			</div>
+			{%for table in table%}
+			<div class="places">
+				
+				<h2>{{table.title}}</h2>
+				<img src="{{table.picture.url}}" style="width: 300px; height: 250px; border-radius: 12px;">
+				<br>
+				<br>
+				<a href="#">{{table.content}}</a>
+			</div>
+			{%endfor%}
+		</div>
+	</div>
+	<div class="footer">
+		<a href="#">Copyright</a>
+		<a href="#">Terms and Conditions</a>
+		<a href="#">Privacy Policy</a>
+		<a href="#">Cookies</a>
+		<a href="#">Complaints</a>
+		{%for actor in actor%}
+		<a href="#">{{actor.title}}</a>
+		{%endfor%}
+	</div>
+</body>
+</html>

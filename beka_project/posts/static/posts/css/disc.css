@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("https://images.miamiandbeaches.com/crm/simpleview/image/upload/c_fit,w_1440,h_900/crm/miamifl/South-Miami-Beach-South-Point-Park_1440x9000-7adce26e5056a36_7adce389-5056-a36a-0b77f11abfd87dd5.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: block;
+    text-align: center;
+    align-content: center;
+
+}
+.A{
+    display: inline-flex;
+    justify-content: center;
+    color: antiquewhite;
+    border-bottom: 5px solid antiquewhite;
+    width: 100%;
+    text-align: center;
+    padding: auto;
+
+}
+.B{
+    border-radius: 5%;
+    background-color:antiquewhite;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px 0px;
+    color: green;
+}
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 3%;
+}
+
+.B1{
+    margin:auto;
+    padding: 20px;
+    text-align: center;
+    display: block;
+    border: 2px solid white;
+    border-radius: 5%;
+}
+.B2{
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    display: block;
+    border: 2px solid white;
+    border-radius: 5%;
+}
+.B3{
+    margin:auto;
+    padding: 20px;
+    text-align: center;
+    display: block;
+    border: 2px solid white;
+    border-radius: 5%;
+}

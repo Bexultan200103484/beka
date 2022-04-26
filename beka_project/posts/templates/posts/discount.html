@@ -1,0 +1,56 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'posts/css/style.css' %}">
+     <link rel="stylesheet" href="{% static 'posts/css/disc.css' %}">
+</head>
+<body>
+    <div class="navbar">
+		<div class="logo">
+			<h1>Travel</h1>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="http://127.0.0.1:8000">Home</a></li>
+				<li><a href="http://127.0.0.1:8000/services">Services</a></li>
+				<li><a href="http://127.0.0.1:8000/places">Places</a></li>
+				<li><a href="http://127.0.0.1:8000/discount">Discounts</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="http://127.0.0.1:8000/index">Cooments</a></li>
+			</ul>
+		</div>
+		<div class="signup">
+			<a href="http://127.0.0.1:8000/registration">Sign Up</a>
+		</div>
+	</div>
+    <div class="A">
+        <h1>DISCOUNTS</h1>
+
+    </div>
+    <div class="B">
+        <div class="B1">
+            <img src="https://sputnik.kz/img/97/85/978563_0:0:2525:2524_1920x0_80_0_0_cffa26c6523fa53d3fa37070b316b5b0.jpg" alt="">
+            <p>Discounts for Flight</p>
+        </div>
+        <div class="B2">
+            <img src="https://pix6.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768" alt="">
+            <p>Discounts for Hotel Reservation</p>
+        </div>
+        <div class="B3">
+            <img src="https://images.immediate.co.uk/production/volatile/sites/30/2017/06/Chicken-rice-bowls-440x400-8d03773.jpg" alt="">
+            <p>Discounts for Meals</p>
+        </div>
+    </div>
+</body>
+</html>
