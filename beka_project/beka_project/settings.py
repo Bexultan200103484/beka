@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 import dj_database_url
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env )
 import django_heroku
 import os
 from pathlib import Path
@@ -34,7 +32,7 @@ SECRET_KEY = 'django-insecure-oqn3g2w_gp-p5tzm0ald#v6!5b7==!v3ikz8r!(o%%dxwqq(^v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['project3beka.herokuapp.com','127.0.0.1']
 
 
 # Application definition
